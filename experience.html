@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience · Saeid Nasiri</title>
+<meta name="description" content="Work history of MohammadSaeid Nasiri: freelance Jira and Django work, Mobinnet (Jira & systems administration) and AsiaTech (RADIUS/AAA).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230C66E4'/><text x='16' y='21' font-family='Arial' font-weight='700' font-size='13' text-anchor='middle' fill='white'>SN</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --text:#172B4D;--text-subtle:#44546F;--text-subtlest:#626F86;
+  --brand:#0C66E4;--brand-hover:#0055CC;
+  --bg:#FFFFFF;--bg-sunken:#F7F8F9;--bg-neutral:#F1F2F4;--bg-neutral-hover:#DCDFE4;
+  --border:#DCDFE4;--border-input:#8590A2;--selected:#E9F2FF;
+  --green-bg:#DCFFF1;--green:#216E4E;--blue-bg:#E9F2FF;--blue:#0055CC;
+  --purple-bg:#F3F0FF;--purple:#5E4DB2;--yellow-bg:#FFF7D6;--yellow:#A54800;
+  --teal-bg:#E7F9FF;--teal:#206A83;
+  --raised:0 1px 1px rgba(9,30,66,.25),0 0 1px rgba(9,30,66,.31);
+  --overlay:0 8px 12px rgba(9,30,66,.15),0 0 1px rgba(9,30,66,.31);
+  --nav-h:56px;--side-w:244px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;font-size:14px;line-height:20px;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+svg{flex:none}
+[hidden]{display:none!important}
+
+/* Top nav */
+.topnav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;padding:0 12px;z-index:60}
+.icon-btn{width:32px;height:32px;border-radius:4px;border:0;background:transparent;color:var(--text-subtle);display:grid;place-items:center;cursor:pointer}
+.icon-btn:hover{background:var(--bg-neutral)}
+.menu-btn{display:none}
+.brand{display:flex;align-items:center;gap:8px;padding:4px 8px;border-radius:4px;color:var(--text);font-weight:600;font-size:15px}
+.brand:hover{background:var(--bg-neutral);text-decoration:none}
+.brand-mark{width:24px;height:24px;border-radius:6px;background:linear-gradient(135deg,#1D7AFC,#0C66E4 55%,#5E4DB2);color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center}
+.nav-links{display:flex;gap:2px;margin-left:6px;height:100%;align-items:center}
+.nav-link{position:relative;height:32px;padding:0 10px;display:flex;align-items:center;border-radius:4px;color:var(--text-subtle);font-weight:500}
+.nav-link:hover{background:var(--bg-neutral);color:var(--text);text-decoration:none}
+.nav-link.active{color:var(--brand)}
+.nav-link.active::after{content:"";position:absolute;left:4px;right:4px;bottom:-12px;height:3px;border-radius:3px 3px 0 0;background:var(--brand)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;padding:0 12px;border-radius:4px;border:0;font:inherit;font-weight:500;cursor:pointer;white-space:nowrap;transition:background .12s}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-hover)}
+.btn-default{background:var(--bg-neutral);color:var(--text)}
+.btn-default:hover{background:var(--bg-neutral-hover)}
+.btn-subtle{background:transparent;color:var(--text-subtle)}
+.btn-subtle:hover{background:var(--bg-neutral)}
+.search{display:flex;align-items:center;gap:6px;height:32px;width:250px;border:1px solid var(--border-input);border-radius:4px;padding:0 8px;color:var(--text-subtlest);background:#fff}
+.topnav .search{margin-left:auto}
+.search:focus-within{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+.search input{border:0;outline:0;background:transparent;font:inherit;color:var(--text);flex:1;min-width:0}
+.avatar{position:relative;width:var(--s,32px);height:var(--s,32px);border-radius:50%;background:linear-gradient(135deg,#1D7AFC,#8270DB);color:#fff;display:inline-grid;place-items:center;font-weight:600;font-size:calc(var(--s,32px)*.38);overflow:hidden;flex:none}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* Sidebar */
+.sidebar{position:fixed;top:var(--nav-h);bottom:0;left:0;width:var(--side-w);background:#fff;border-right:1px solid var(--border);padding:16px 8px;overflow-y:auto;z-index:50;transition:transform .2s ease}
+.project{display:flex;gap:10px;align-items:center;padding:6px 8px 18px}
+.project-icon{width:32px;height:32px;border-radius:6px;background:linear-gradient(135deg,#1D7AFC,#5E4DB2);color:#fff;font-weight:700;font-size:12px;display:grid;place-items:center}
+.project strong{display:block;font-size:14px;line-height:18px}
+.project small{display:block;color:var(--text-subtlest);font-size:12px}
+.side-label{font-size:11px;font-weight:700;color:var(--text-subtlest);text-transform:uppercase;letter-spacing:.03em;padding:12px 10px 6px}
+.side-item{position:relative;display:flex;align-items:center;gap:10px;height:36px;padding:0 10px;border-radius:4px;color:var(--text-subtle);font-weight:500}
+.side-item:hover{background:var(--bg-neutral);color:var(--text);text-decoration:none}
+.side-item.active{background:var(--selected);color:var(--brand)}
+.side-item.active::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:var(--brand)}
+.side-item .ext{margin-left:auto;opacity:.5}
+.side-foot{margin:18px 8px 0;padding-top:14px;border-top:1px solid var(--border);font-size:12px;line-height:16px;color:var(--text-subtlest)}
+.scrim{position:fixed;inset:var(--nav-h) 0 0 0;background:rgba(9,30,66,.4);z-index:45;display:none}
+.scrim.show{display:block}
+
+/* Main */
+.main{margin-left:var(--side-w);padding:calc(var(--nav-h) + 24px) 40px 56px}
+.container{max-width:1280px;margin:0 auto}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;color:var(--text-subtlest)}
+.crumbs a{color:var(--text-subtlest)}
+.page-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:12px}
+.page-head h1{font-size:24px;line-height:30px;font-weight:600}
+.page-head p{color:var(--text-subtle);margin-top:2px}
+.lozenge{display:inline-flex;align-items:center;height:18px;padding:0 5px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.01em;text-transform:uppercase;white-space:nowrap}
+.l-green{background:var(--green-bg);color:var(--green)}
+.l-blue{background:var(--blue-bg);color:var(--blue)}
+.l-gray{background:var(--bg-neutral);color:var(--text-subtle)}
+.l-purple{background:var(--purple-bg);color:var(--purple)}
+.tag{display:inline-flex;align-items:center;height:20px;padding:0 6px;border-radius:3px;background:var(--bg-neutral);color:var(--text);font-size:12px;white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);color:var(--text-subtlest);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Tabs + toolbar */
+.tabs{display:flex;gap:20px;border-bottom:2px solid var(--border);margin-top:18px}
+.tab{background:none;border:0;font:inherit;font-weight:500;color:var(--text-subtle);padding:8px 2px;margin-bottom:-2px;border-bottom:2px solid transparent;cursor:pointer;display:flex;align-items:center;gap:6px}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--brand);border-bottom-color:var(--brand)}
+.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0}
+.toolbar .search{width:210px}
+.chip{height:32px;padding:0 10px;border-radius:4px;border:0;background:var(--bg-neutral);color:var(--text);font:inherit;font-weight:500;cursor:pointer}
+.chip:hover{background:var(--bg-neutral-hover)}
+.chip.active{background:var(--selected);color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+.count{margin-left:auto;color:var(--text-subtlest);font-size:13px}
+
+/* Board */
+.board{display:grid;grid-template-columns:repeat(3,minmax(280px,1fr));gap:12px;overflow-x:auto;padding-bottom:6px;align-items:start}
+.column{background:var(--bg-sunken);border-radius:8px;padding:6px 6px 8px;min-height:240px}
+.col-head{padding:8px 8px 12px}
+.col-row{display:flex;align-items:center;gap:8px}
+.col-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--text-subtle)}
+.col-count{font-size:12px;color:var(--text-subtlest);font-weight:600}
+.col-row .lozenge{margin-left:auto}
+.col-meta{font-size:12px;line-height:17px;color:var(--text-subtlest);margin-top:4px}
+.card{display:block;background:#fff;border-radius:6px;padding:12px;box-shadow:var(--raised);margin-bottom:8px;cursor:pointer;transition:background .1s,box-shadow .1s;animation:in .25s ease both}
+.card:hover{background:#F7F8F9}
+.card:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+.card .client{margin-bottom:8px}
+.card h3{font-size:14px;line-height:20px;font-weight:400;margin-bottom:10px}
+.card .tags{margin-bottom:12px}
+.card-foot{display:flex;align-items:center;justify-content:space-between}
+.card-key{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text-subtle)}
+.empty{padding:16px 8px;text-align:center;color:var(--text-subtlest);font-size:13px}
+@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* List */
+.list-wrap{border:1px solid var(--border);border-radius:8px;overflow-x:auto}
+.list{width:100%;border-collapse:collapse;min-width:820px}
+.list th{text-align:left;font-size:12px;font-weight:600;color:var(--text-subtle);padding:10px 12px;border-bottom:2px solid var(--border);background:var(--bg-sunken)}
+.list td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+.list tr:last-child td{border-bottom:0}
+.list tbody tr{cursor:pointer}
+.list tbody tr:hover{background:var(--bg-sunken)}
+.list .k{display:flex;align-items:center;gap:6px;font-weight:600;color:var(--text-subtle);white-space:nowrap}
+
+/* Timeline */
+.tl{border:1px solid var(--border);border-radius:8px;overflow-x:auto;background:#fff}
+.tl-inner{min-width:1000px}
+.tl-head,.tl-row{display:grid;grid-template-columns:270px 1fr}
+.tl-head{height:40px;background:var(--bg-sunken);border-bottom:1px solid var(--border);font-size:12px;font-weight:600;color:var(--text-subtle)}
+.tl-left{display:flex;align-items:center;gap:10px;padding:0 16px;border-right:1px solid var(--border);min-width:0}
+.tl-left b{display:block;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-left small{display:block;font-size:12px;color:var(--text-subtlest);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-right{position:relative;background-image:linear-gradient(to right,#EBECF0 1px,transparent 1px);background-size:calc(100% / 19) 100%}
+.tl-head .tl-right span.y{position:absolute;top:50%;transform:translate(5px,-50%);font-size:11px}
+.tl-row{height:54px;border-bottom:1px solid var(--border)}
+.tl-row:hover{background-color:#FAFBFC}
+.tl-group{padding:7px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--text-subtlest);background:var(--bg-sunken);border-bottom:1px solid var(--border)}
+.tl-bar{position:absolute;top:15px;height:24px;border-radius:4px;padding:0 8px;font-size:12px;font-weight:500;line-height:24px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:var(--raised)}
+.bar-done{background:#8270DB}
+.bar-progress{background:linear-gradient(90deg,#1D7AFC,#579DFF)}
+.bar-edu{background:#2898BD}
+.tl-ms{position:absolute;top:20px;width:13px;height:13px;background:#E56910;border-radius:2px;transform:translateX(-50%) rotate(45deg)}
+.tl-ms-label{position:absolute;top:17px;transform:translateX(12px);font-size:12px;color:var(--text-subtle);white-space:nowrap}
+.tl-today{position:absolute;top:0;bottom:0;width:2px;background:#E2483D;opacity:.75}
+.tl-today-tag{position:absolute;top:11px;transform:translateX(-50%);background:#E2483D;color:#fff;font-size:10px;font-weight:700;padding:0 5px;border-radius:3px;line-height:16px;text-transform:uppercase}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;color:var(--text-subtle);font-size:12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:10px;border-radius:2px;display:inline-block}
+
+/* Modal (issue view) */
+.backdrop{position:fixed;inset:0;background:rgba(9,30,66,.54);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:56px 16px;overflow-y:auto}
+.backdrop.open{display:flex}
+.modal{background:#fff;border-radius:8px;box-shadow:var(--overlay);width:100%;max-width:1000px;animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+.modal-top{display:flex;align-items:center;justify-content:space-between;padding:16px 24px 0}
+.m-crumbs{display:flex;align-items:center;gap:6px;color:var(--text-subtle);flex-wrap:wrap}
+.m-crumbs b{font-weight:500}
+.modal-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;padding:14px 24px 32px}
+.modal h2{font-size:24px;line-height:30px;font-weight:600;margin-bottom:22px}
+.field-h{font-weight:600;margin:0 0 8px}
+.m-desc p{font-size:14.5px;line-height:23px;margin-bottom:12px}
+.m-nav{display:flex;gap:8px;margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+.status-btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:4px;font-weight:600;margin-bottom:16px}
+.st-done{background:var(--green-bg);color:var(--green)}
+.st-progress{background:var(--blue-bg);color:var(--blue)}
+.details{border:1px solid var(--border);border-radius:6px}
+.details-h{padding:12px 16px;font-weight:600;border-bottom:1px solid var(--border)}
+.d-row{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 16px;align-items:center}
+.d-row>span:first-child{color:var(--text-subtle);font-weight:600;font-size:13px}
+.d-row>span:last-child{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.d-meta{font-size:12px;color:var(--text-subtlest);margin-top:12px;line-height:18px}
+
+@media (max-width:1024px){
+  .menu-btn{display:grid}
+  .sidebar{transform:translateX(-100%);box-shadow:var(--overlay)}
+  .sidebar.open{transform:none}
+  .main{margin-left:0;padding:calc(var(--nav-h) + 20px) 24px 48px}
+}
+@media (max-width:820px){.modal-grid{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .nav-links,.topnav .search,.topnav .create{display:none}
+  .topnav .avatar{margin-left:auto}
+  .main{padding:calc(var(--nav-h) + 16px) 16px 40px}
+  .board{grid-template-columns:repeat(3,85%);scroll-snap-type:x mandatory}
+  .column{scroll-snap-align:start}
+  .count{margin-left:0;width:100%}
+  .backdrop{padding:0}
+  .modal{border-radius:0;min-height:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a class="brand" href="index.html"><span class="brand-mark">SN</span><span>Saeid Nasiri</span></a>
+  <nav class="nav-links">
+    <a class="nav-link" href="index.html">Summary</a>
+    <a class="nav-link" data-view-link="board" href="#board">Experience</a>
+    <a class="nav-link" data-view-link="timeline" href="#timeline">Timeline</a>
+  </nav>
+  <a class="btn btn-primary create" href="mailto:saeid186nasiri@gmail.com">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Get in touch
+  </a>
+  <label class="search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="navSearch" placeholder="Search my work" aria-label="Search my work">
+  </label>
+  <span class="avatar" style="--s:28px" title="Saeid Nasiri"><b>SN</b><img src="photo.jpg" alt="" onerror="this.remove()"></span>
+</header>
+
+<aside class="sidebar" id="sidebar">
+  <div class="project">
+    <span class="project-icon">SN</span>
+    <div><strong>Saeid Nasiri</strong><small>Jira & automation engineer</small></div>
+  </div>
+  <div class="side-label">Profile</div>
+  <a class="side-item" href="index.html">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Summary</a>
+  <a class="side-item" href="index.html#skills">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg>Components</a>
+  <a class="side-item" href="index.html#releases">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 22V4M4 4h13l-2.5 4L17 12H4"/></svg>Releases</a>
+
+  <div class="side-label">Career</div>
+  <a class="side-item" data-view-link="board" href="#board">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v8M12 7v4M16 7v10"/></svg>Board</a>
+  <a class="side-item" data-view-link="timeline" href="#timeline">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h10M8 12h12M5 18h9"/></svg>Timeline</a>
+  <a class="side-item" data-view-link="list" href="#list">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>List</a>
+
+  <div class="side-label">Elsewhere</div>
+  <a class="side-item" href="https://github.com/saeid186" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub<span class="ext">↗</span></a>
+  <a class="side-item" href="https://www.linkedin.com/in/saeid-nasiri-969050168/" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn<span class="ext">↗</span></a>
+  <a class="side-item" href="https://hub.docker.com/u/saeid186" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg>Docker Hub<span class="ext">↗</span></a>
+  <p class="side-foot">This is a personal website with a Jira look. It has no connection to Atlassian.</p>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+<div class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Projects</a><span>/</span><a href="index.html">Saeid Nasiri</a><span>/</span><span>Experience</span></nav>
+
+  <div class="page-head">
+    <div>
+      <h1>Career board</h1>
+      <p>Each card is a piece of real work. Click one to read the details.</p>
+    </div>
+    <a class="btn btn-default" href="MohammadSaeid-Nasiri-CV.pdf" download>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>Download CV</a>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" data-tab="board" role="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v8M12 7v4M16 7v10"/></svg>Board</button>
+    <button class="tab" data-tab="timeline" role="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h10M8 12h12M5 18h9"/></svg>Timeline</button>
+    <button class="tab" data-tab="list" role="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>List</button>
+  </div>
+
+  <div class="toolbar" id="toolbar">
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="boardSearch" placeholder="Search this board" aria-label="Search this board">
+    </label>
+    <div id="chips" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+    <button class="btn btn-subtle" id="clearBtn" hidden>Clear filters</button>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div id="view-board"><div class="board" id="board"></div></div>
+  <div id="view-list" hidden><div class="list-wrap"><table class="list"><thead><tr><th>Key</th><th>Summary</th><th>Company</th><th>Status</th><th>Labels</th></tr></thead><tbody id="listBody"></tbody></table></div></div>
+  <div id="view-timeline" hidden>
+    <div class="tl"><div class="tl-inner" id="timeline"></div></div>
+    <div class="legend">
+      <span><i style="background:linear-gradient(90deg,#1D7AFC,#579DFF)"></i>Current role</span>
+      <span><i style="background:#8270DB"></i>Past roles</span>
+      <span><i style="background:#2898BD"></i>Education</span>
+      <span><i style="background:#E56910;width:10px;transform:rotate(45deg)"></i>Certification</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> MohammadSaeid Nasiri</span>
+    <span>Design inspired by Atlassian Jira. Not affiliated with Atlassian.</span>
+  </footer>
+</div>
+</main>
+
+<!-- Issue view -->
+<div class="backdrop" id="backdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="modal-top">
+      <div class="m-crumbs" id="mCrumbs"></div>
+      <button class="icon-btn" id="mClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-grid">
+      <div>
+        <h2 id="mTitle"></h2>
+        <p class="field-h">Description</p>
+        <div class="m-desc" id="mDesc"></div>
+        <div class="m-nav">
+          <button class="btn btn-default" id="mPrev">← Previous</button>
+          <button class="btn btn-default" id="mNext">Next →</button>
+        </div>
+      </div>
+      <aside>
+        <div id="mStatus"></div>
+        <div class="details">
+          <div class="details-h">Details</div>
+          <div class="d-row"><span>Assignee</span><span><span class="avatar" style="--s:24px"><b>SN</b><img src="photo.jpg" alt="" onerror="this.remove()"></span>Saeid Nasiri</span></div>
+          <div class="d-row"><span>Company</span><span id="mCompany"></span></div>
+          <div class="d-row"><span>Role</span><span id="mRole"></span></div>
+          <div class="d-row"><span>Period</span><span id="mPeriod"></span></div>
+          <div class="d-row"><span>Location</span><span id="mPlace"></span></div>
+          <div class="d-row"><span>Labels</span><span id="mLabels"></span></div>
+        </div>
+        <p class="d-meta">Use ← → to move between issues. Esc closes this view.</p>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+const TYPE = {
+  story:'<svg width="16" height="16" viewBox="0 0 16 16" aria-label="Story"><rect width="16" height="16" rx="3" fill="#63BA3C"/><path d="M5 4h6v8.5L8 10.6 5 12.5z" fill="#fff"/></svg>',
+  task:'<svg width="16" height="16" viewBox="0 0 16 16" aria-label="Task"><rect width="16" height="16" rx="3" fill="#4BADE8"/><path d="m4.5 8.2 2.3 2.3 4.7-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  bug:'<svg width="16" height="16" viewBox="0 0 16 16" aria-label="Bug"><rect width="16" height="16" rx="3" fill="#E5493A"/><circle cx="8" cy="8" r="3" fill="#fff"/></svg>',
+  epic:'<svg width="16" height="16" viewBox="0 0 16 16" aria-label="Epic"><rect width="16" height="16" rx="3" fill="#904EE2"/><path d="M9.2 3 5 9h3l-1 4 4.2-6H8.2z" fill="#fff"/></svg>'
+};
+const AV = '<span class="avatar" style="--s:24px" title="Saeid Nasiri"><b>SN</b><img src="photo.jpg" alt="" onerror="this.remove()"></span>';
+const STATUS = { done:['Done','l-green','st-done'], progress:['In progress','l-blue','st-progress'] };
+
+const EPICS = [
+  { id:'free', name:'Freelance / Consulting', role:'Developer Engineer', period:'Apr 2025 – Present', place:'Remote', status:'progress' },
+  { id:'mob',  name:'Mobinnet', role:'Jira Administrator & Systems Administrator', period:'Oct 2019 – Apr 2025', place:'Tehran, Iran', status:'done' },
+  { id:'asia', name:'AsiaTech', role:'Systems Administrator', period:'Apr 2017 – Oct 2019', place:'Tehran, Iran', status:'done' }
+];
+
+const ISSUES = [
+  // Freelance
+  { key:'SN-31', epic:'free', client:'NAK Company', type:'story', title:'Backend services for an ERP portal, built in Django',
+    labels:['Python','Django'],
+    desc:['NAK needed a backend for their ERP portal. I designed the backend services in Django: the data model, the API layer and the logic that sits between them.'] },
+  { key:'SN-32', epic:'free', client:'HamrahTel Group', type:'story', title:'ScriptRunner listeners and validators for Jira',
+    labels:['Jira','Groovy','ScriptRunner'],
+    desc:['Custom Groovy automation in ScriptRunner. Listeners react to issue events, and validators stop bad data from getting into a workflow in the first place.','This was part of a larger Jira and CRM development project for HamrahTel.'] },
+  { key:'SN-33', epic:'free', client:'HamrahTel Group', type:'task', title:'Python integrations between Jira, GitLab and monitoring tools',
+    labels:['Python','Jira','GitLab','REST API'],
+    desc:['Python services and scripts that pass information between Jira and the other systems the team already used, including GitLab and their monitoring tools.','The goal was simple: nobody should have to paste a commit link or an alert into a ticket by hand.'] },
+  { key:'SN-34', epic:'free', client:'HamrahTel Group', type:'task', title:'Remove repetitive admin work with self-service patterns',
+    labels:['Jira','Automation'],
+    desc:['A lot of admin time went into small requests that came in again and again. I automated the ones that could be automated and turned the rest into self-service flows, so people could get what they needed without waiting for an admin.'] },
+  { key:'SN-35', epic:'free', client:'Al Ishara Company', type:'task', title:'Automated health checks, cleanup routines and performance tuning',
+    labels:['Jira','CRM','Asset management'],
+    desc:['Jira, CRM and asset management work for Al Ishara. I added automated health checks and cleanup routines, plus a repeatable way to tune performance. Together they made the system more reliable from day to day.'] },
+
+  // Mobinnet
+  { key:'SN-21', epic:'mob', type:'story', title:'Workflow design with schemes and advanced ScriptRunner',
+    labels:['Jira','Groovy','ScriptRunner'],
+    desc:['Designed and built workflow-driven processes in Jira using workflows, schemes and ScriptRunner: validators, post-functions, listeners and scripted fields.','Most of my Jira work at Mobinnet was here. A team would describe how they worked, and I would make Jira follow it.'] },
+  { key:'SN-22', epic:'mob', type:'story', title:'Django REST services connecting monitoring and ops to Jira',
+    labels:['Python','Django','Jira','REST API'],
+    desc:['Internal services built with Django REST Framework that connected our monitoring and operations tools to Jira.','I automated the routine tasks around them with Python and Bash.'] },
+  { key:'SN-23', epic:'mob', type:'task', title:'Run and optimise the Jira, Nagios and RADIUS databases',
+    labels:['MySQL','MariaDB'],
+    desc:['I looked after the MySQL and MariaDB databases behind Jira, Nagios and RADIUS, and used stored procedures, triggers and scheduled events to keep them tidy and fast.'] },
+  { key:'SN-24', epic:'mob', type:'task', title:'Connect GitLab to Active Directory',
+    labels:['GitLab','Active Directory','Linux'],
+    desc:['Integrated GitLab with Active Directory so that access was managed in one place. Central authentication made access control simpler and more consistent.'] },
+  { key:'SN-25', epic:'mob', type:'task', title:'Containerise Nagios workers with Docker',
+    labels:['Docker','Nagios','Linux'],
+    desc:['Moved the Nagios workers into Docker containers. Deployments became the same on every host, and the workers used fewer resources than before.'] },
+
+  // AsiaTech
+  { key:'SN-11', epic:'asia', type:'task', title:'Python and Bash automation for AAA operations',
+    labels:['Python','Bash','Linux'],
+    desc:['Much of the AAA work was repetitive: creating and disabling users, rolling out policy updates, and bulk changes whenever a plan changed.','I wrote Python and Bash scripts for these jobs, so they no longer had to be done by hand. There were fewer manual steps and tickets were closed faster.'] },
+  { key:'SN-12', epic:'asia', type:'story', title:'Operate and tune FreeRADIUS clusters',
+    labels:['FreeRADIUS','Linux'],
+    desc:['Ran FreeRADIUS clusters in production and tuned their virtual servers, modules and dictionaries.','I set up failover and load balancing, which made authentication more reliable.'] },
+  { key:'SN-13', epic:'asia', type:'task', title:'Schema design and query tuning for auth and accounting data',
+    labels:['MySQL'],
+    desc:['Designed schemas and optimised queries and indexes for accounting and authentication data, and added procedures, triggers and events for housekeeping.','This job is where my MySQL skills grew the most.'] },
+  { key:'SN-14', epic:'asia', type:'story', title:'ELK pipelines and dashboards for AAA logs',
+    labels:['ELK','Linux'],
+    desc:['Built ELK pipelines with grok filters, plus dashboards for the AAA logs.','After that, incidents were triaged faster and patterns in drops and timeouts were much easier to spot.'] },
+  { key:'SN-15', epic:'asia', type:'bug', title:'Production troubleshooting, runbooks and health-check scripts',
+    labels:['Linux','tcpdump','Wireshark'],
+    desc:['I tracked down production issues by analysing packets and logs with tcpdump, Wireshark and the radiusd logs.','I also wrote runbooks and health-check scripts, so whoever got the next incident had something to start from.'] }
+];
+
+const CHIPS = ['Python','Groovy','Jira','Django','Docker','MySQL','Linux','ELK'];
+const VIEWS = ['board','timeline','list'];
+const epicOf = i => EPICS.find(e => e.id === i.epic);
+const state = { label:null, q:new URLSearchParams(location.search).get('q') || '', view:'board' };
+
+function matches(i){
+  if (state.label && !i.labels.includes(state.label)) return false;
+  if (!state.q) return true;
+  const e = epicOf(i);
+  const hay = [i.key, i.title, i.client||'', e.name, e.role, ...i.labels, ...i.desc].join(' ').toLowerCase();
+  return hay.includes(state.q.trim().toLowerCase());
+}
+
+function card(i){
+  return `<article class="card" tabindex="0" data-key="${i.key}" aria-label="${i.key}: ${i.title}">
+    ${i.client ? `<div class="client"><span class="lozenge l-purple">${i.client}</span></div>` : ''}
+    <h3>${i.title}</h3>
+    <div class="tags">${i.labels.map(l => `<span class="tag">${l}</span>`).join('')}</div>
+    <div class="card-foot"><span class="card-key">${TYPE[i.type]}${i.key}</span>${AV}</div>
+  </article>`;
+}
+
+function render(){
+  const visible = ISSUES.filter(matches);
+  $('#board').innerHTML = EPICS.map(e => {
+    const items = visible.filter(i => i.epic === e.id);
+    const [label, cls] = STATUS[e.status];
+    return `<section class="column">
+      <header class="col-head">
+        <div class="col-row"><span class="col-title">${e.name}</span><span class="col-count">${items.length}</span><span class="lozenge ${cls}">${label}</span></div>
+        <div class="col-meta">${e.role}<br>${e.period} · ${e.place}</div>
+      </header>
+      ${items.map(card).join('') || '<p class="empty">Nothing here matches the filter.</p>'}
+    </section>`;
+  }).join('');
+
+  $('#listBody').innerHTML = visible.map(i => {
+    const e = epicOf(i), [label, cls] = STATUS[e.status];
+    return `<tr data-key="${i.key}" tabindex="0">
+      <td><span class="k">${TYPE[i.type]}${i.key}</span></td>
+      <td>${i.title}</td>
+      <td>${i.client ? i.client : e.name}</td>
+      <td><span class="lozenge ${cls}">${label}</span></td>
+      <td><div class="tags">${i.labels.slice(0,3).map(l => `<span class="tag">${l}</span>`).join('')}</div></td>
+    </tr>`;
+  }).join('') || '<tr><td colspan="5" class="empty">No issues match the filter.</td></tr>';
+
+  $('#chips').innerHTML = CHIPS.map(c => `<button class="chip ${state.label===c?'active':''}" data-chip="${c}">${c}</button>`).join('');
+  $('#clearBtn').hidden = !(state.label || state.q);
+  $('#count').textContent = `Showing ${visible.length} of ${ISSUES.length} issues`;
+}
+
+/* ---------- Timeline ---------- */
+const START = 2008, END = 2027, SPAN = END - START;
+const pos = (y, m = 1) => ((y - START) + (m - 1) / 12) / SPAN * 100;
+const TL = [
+  { group:'Work' },
+  { name:'Freelance / Consulting', sub:'Developer Engineer · Remote', from:[2025,4], to:null, text:'Apr 2025 – now', cls:'bar-progress', icon:'epic' },
+  { name:'Mobinnet', sub:'Jira & Systems Administrator', from:[2019,10], to:[2025,4], text:'Oct 2019 – Apr 2025', cls:'bar-done', icon:'epic' },
+  { name:'AsiaTech', sub:'Systems Administrator', from:[2017,4], to:[2019,10], text:'Apr 2017 – Oct 2019', cls:'bar-done', icon:'epic' },
+  { group:'Education' },
+  { name:"Bachelor's (Top-Up), IT", sub:'UAST, Industries Unit', from:[2019,1], to:[2023,1], text:'2019 – 2022', cls:'bar-edu', icon:'story' },
+  { name:'Associate of Engineering', sub:'Islamic Azad University', from:[2008,1], to:[2013,1], text:'2008 – 2012', cls:'bar-edu', icon:'story' },
+  { group:'Certifications' },
+  { name:'LPIC-2', sub:'Linux Professional Institute', at:[2018,6], text:'2018' },
+  { name:'LPIC-1', sub:'Linux Professional Institute', at:[2017,6], text:'2017' },
+  { name:'CCNA', sub:'Cisco', at:[2017,4], text:'2017' }
+];
+function renderTimeline(){
+  const now = new Date();
+  const np = Math.min(100, pos(now.getFullYear(), now.getMonth() + 1 + (now.getDate() - 1) / 31));
+  const years = Array.from({ length: SPAN }, (_, k) => START + k);
+  const diamond = '<svg width="16" height="16" viewBox="0 0 16 16"><rect x="3" y="3" width="10" height="10" rx="1.5" transform="rotate(45 8 8)" fill="#E56910"/></svg>';
+  let html = `<div class="tl-head"><div class="tl-left">Work, education & certifications</div>
+    <div class="tl-right">${years.map(y => `<span class="y" style="left:${pos(y)}%">${y}</span>`).join('')}
+    <span class="tl-today-tag" style="left:${np}%">Today</span></div></div>`;
+  html += TL.map(r => {
+    if (r.group) return `<div class="tl-group">${r.group}</div>`;
+    let bar;
+    if (r.at) {
+      const p = pos(...r.at);
+      bar = `<span class="tl-ms" style="left:${p}%" title="${r.name} · ${r.text}"></span><span class="tl-ms-label" style="left:${p}%">${r.name} · ${r.text}</span>`;
+    } else {
+      const a = pos(...r.from), b = r.to ? pos(...r.to) : np;
+      bar = `<span class="tl-bar ${r.cls}" style="left:${a}%;width:${b - a}%" title="${r.name}: ${r.text}">${r.text}</span>`;
+    }
+    return `<div class="tl-row">
+      <div class="tl-left">${r.at ? diamond : TYPE[r.icon]}<div style="min-width:0"><b>${r.name}</b><small>${r.sub}</small></div></div>
+      <div class="tl-right">${bar}<span class="tl-today" style="left:${np}%"></span></div>
+    </div>`;
+  }).join('');
+  $('#timeline').innerHTML = html;
+}
+
+/* ---------- Views & routing ---------- */
+function setView(v){
+  state.view = v;
+  VIEWS.forEach(x => $('#view-' + x).hidden = x !== v);
+  $$('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === v));
+  $$('.side-item[data-view-link]').forEach(a => a.classList.toggle('active', a.dataset.viewLink === v));
+  $$('.nav-link[data-view-link]').forEach(a => a.classList.toggle('active', a.dataset.viewLink === v || (v === 'list' && a.dataset.viewLink === 'board')));
+  $('#toolbar').hidden = v === 'timeline';
+}
+
+let current = null;
+function openIssue(key){
+  const i = ISSUES.find(x => x.key === key);
+  if (!i) return;
+  current = key;
+  const e = epicOf(i), [label, , stCls] = STATUS[e.status];
+  $('#mCrumbs').innerHTML = `${TYPE.epic}<b>${e.name}</b><span>/</span>${TYPE[i.type]}<b>${i.key}</b>`;
+  $('#mTitle').textContent = i.title;
+  $('#mDesc').innerHTML = i.desc.map(p => `<p>${p}</p>`).join('');
+  $('#mStatus').innerHTML = `<span class="status-btn ${stCls}">${label}</span>`;
+  $('#mCompany').innerHTML = i.client ? `<span class="lozenge l-purple">${i.client}</span>` : e.name;
+  $('#mRole').textContent = e.role;
+  $('#mPeriod').textContent = e.period;
+  $('#mPlace').textContent = e.place;
+  $('#mLabels').innerHTML = i.labels.map(l => `<span class="tag">${l}</span>`).join('');
+  $('#backdrop').classList.add('open');
+  document.body.classList.add('locked');
+}
+function closeIssue(){
+  if (!current) return;
+  current = null;
+  $('#backdrop').classList.remove('open');
+  document.body.classList.remove('locked');
+  if (/^#SN-\d+$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search + '#' + state.view);
+}
+function step(dir){
+  const list = ISSUES.filter(matches);
+  const idx = list.findIndex(i => i.key === current);
+  if (idx < 0 || !list.length) return;
+  location.hash = list[(idx + dir + list.length) % list.length].key;
+}
+function route(){
+  const h = location.hash.slice(1);
+  if (VIEWS.includes(h)) { setView(h); closeIssue(); }
+  else if (/^SN-\d+$/.test(h)) openIssue(h);
+  else { setView(state.view); closeIssue(); }
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('click', ev => {
+  const chip = ev.target.closest('[data-chip]');
+  if (chip) { state.label = state.label === chip.dataset.chip ? null : chip.dataset.chip; render(); return; }
+  const tab = ev.target.closest('[data-tab]');
+  if (tab) { location.hash = tab.dataset.tab; return; }
+  const item = ev.target.closest('[data-key]');
+  if (item) { location.hash = item.dataset.key; }
+});
+document.addEventListener('keydown', ev => {
+  if (current) {
+    if (ev.key === 'Escape') closeIssue();
+    if (ev.key === 'ArrowRight') step(1);
+    if (ev.key === 'ArrowLeft') step(-1);
+    return;
+  }
+  const item = ev.target.closest && ev.target.closest('[data-key]');
+  if (item && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); location.hash = item.dataset.key; }
+});
+$('#backdrop').addEventListener('click', ev => { if (ev.target.id === 'backdrop') closeIssue(); });
+$('#mClose').addEventListener('click', closeIssue);
+$('#mPrev').addEventListener('click', () => step(-1));
+$('#mNext').addEventListener('click', () => step(1));
+
+const searches = [$('#boardSearch'), $('#navSearch')];
+searches.forEach(inp => {
+  inp.value = state.q;
+  inp.addEventListener('input', () => {
+    state.q = inp.value;
+    searches.forEach(o => { if (o !== inp) o.value = inp.value; });
+    if (state.view === 'timeline') location.hash = 'board';
+    render();
+  });
+});
+$('#clearBtn').addEventListener('click', () => { state.label = null; state.q = ''; searches.forEach(s => s.value = ''); render(); });
+
+const sb = $('#sidebar'), scrim = $('#scrim');
+const toggleNav = open => { sb.classList.toggle('open', open); scrim.classList.toggle('show', open); };
+$('#menuBtn').addEventListener('click', () => toggleNav(!sb.classList.contains('open')));
+scrim.addEventListener('click', () => toggleNav(false));
+sb.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleNav(false)));
+
+window.addEventListener('hashchange', route);
+$('#year').textContent = new Date().getFullYear();
+render();
+renderTimeline();
+route();
+</script>
+</body>
+</html>
